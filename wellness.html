@@ -6,58 +6,103 @@
     <title>Document</title>
     <link rel="stylesheet" href="src/output.css">
 </head>
-<body>
+<body class="2xl:max-w-screen-2xl 2xl:mx-auto bg-white">
      <header class="p-6 md:p-10">
-      <nav class="flex justify-between items-center p-4 ">
-        <img src="Assets/Frame 13029.jpg" alt="" />
+       <nav class="flex justify-between items-center p-4">
+        <div class="flex items-center space-x-2">
+          <figure class="size-10">
+            <img src="Assets/Frame 10.jpg" alt="" />
+          </figure>
+          <p class="font-bold md:text-xl">
+            Caregiver's <span class="text-[#50347F]">Ally</span>
+          </p>
+        </div>
 
-        <ul class="space-x-4 text-lg *:text-gray-400 hidden lg:flex">
-          <li><a class="text-[#50347F]" href="index.html">Home</a></li>
+        <ul
+          class="nav-menu flex flex-col gap-6 fixed top-0 right-0 rounded bg-white/50 backdrop-blur-lg p-24 scale-y-0 origin-top transition-transform duration-300 sm:flex-row sm:static sm:bg-transparent sm:p-2 sm:backdrop-blur-0 sm:scale-y-100"
+        >
+          <li><a class="text-[#50347F] font-semibold" href="">Home</a></li>
           <li>
-            <a class="hover:text-[#50347F]" href="wellness.html">Wellness</a>
+            <a class="hover:text-[#50347F] font-semibold" href="wellness.html"
+              >Wellness</a
+            >
           </li>
-          <li><a class="hover:text-[#50347F]" href="#">Plan</a></li>
-          <li><a class="hover:text-[#50347F]" href="#">FAQ</a></li>
-          <li><a class="hover:text-[#50347F]" href="#">Blog</a></li>
+          <li>
+            <a class="hover:text-[#50347F] font-semibold" href="#">Plan</a>
+          </li>
+          <li>
+            <a class="hover:text-[#50347F] font-semibold" href="#">FAQ</a>
+          </li>
+          <li>
+            <a class="hover:text-[#50347F] font-semibold" href="blog.html"
+              >Blog</a
+            >
+          </li>
         </ul>
-        <div class="space-x-4">
-          <a href="#">Login</a>
+        <div class="space-x-4 hidden sm:block">
+          <button><a href="#">Login</a></button>
           <a
-            class="bg-[#50347F] border rounded-xl text-white py-2 px-3"
-            href="signup.html"
+            class="signUpBtn bg-[#50347F] border rounded-xl text-white py-2 px-2"
+            href="#"
             >Sing Up</a
           >
         </div>
+        <div
+          class="sm:hidden hamburger fixed bg-[#50347F] py-5 top-[30px] right-6 h-8 w-12 z-30 rounded cursor-pointer before:content-[''] before:h-0.5 before:w-2/3 before:bg-white before:absolute before:top-4 before:left-2 after:content-[''] after:h-0.5 after:w-2/3 after:bg-white after:absolute after:top-6 after:left-2 transition-all before:transition-all after:transition-all"
+        ></div>
       </nav>
+
+      <div
+        id="mobileMenu"
+        class="hidden flex flex-col items-center space-y-4 text-lg mt-4"
+      >
+        <a class="text-[#50347F] font-semibold" href="#">Home</a>
+        <a class="hover:text-[#50347F] font-semibold" href="wellness.html"
+          >Wellness</a
+        >
+        <a class="hover:text-[#50347F] font-semibold" href="#">Plan</a>
+        <a class="hover:text-[#50347F] font-semibold" href="#">FAQ</a>
+        <a class="hover:text-[#50347F] font-semibold" href="blog.html">Blog</a>
+        <div class="lg:hidden flex flex-col justify-center items-center gap-4">
+          <a class="hover:text-[#50347F] hover:font-semibold" href="#">Login</a>
+          <a class="signUpBtn hover:text-[#50347F] hover:font-semibold" href="#"
+            >Sign Up</a
+          >
+        </div>
+      </div>
     </header>
+
+
     <section class="bg-[#130128] p-6 md:p-12 text-white">
       <div class="flex flex-col items-center space-y-5">
         <h2 class="text-2xl font-semibold md:text-4xl">
           Let's calculate your wellness
         </h2>
-        <p class="w-2/4 text-center text-gray-400">
+        <p class="sm:w-2/4 text-center text-gray-400">
           We are able to tell you the overall percentage of your wellness by
           collecting your health data and our mood tracking algorithm.
         </p>
       </div>
 
 
-      <div class="w-[45%] mt-10 p-12 rounded place-self-center flex flex-col justify-center items-center space-y-3 bg-white text-black border">
+      <div class="w-full sm:w-[45%] mt-10 p-4 sm:p-12 rounded sm:place-self-center flex flex-col justify-center items-center space-y-3 bg-white text-black border">
         
       <div class="flex flex-col space-y-6 place-items-center ">
         <h2 class="text-2xl font-semibold">Provide Your Health Data</h2>
         <div class="">
-            <form action="" class="space-y-5 pl-15">
+            <form action="" class="space-y-5 pl-8 sm:pl-15">
                 <input class="w-[90%] border p-2 appearance-none font-semibold rounded bg-[#EBE0FD]" type="text" placeholder="Link health data">
                 <input class="w-[90%] border p-2 appearance-none font-semibold rounded" type="text" placeholder="What is your mood today">
                 
             </form>
-            <button class="w-[78%] border p-2 font-semibold rounded justify-center ml-15 mt-6 bg-[#50347F] text-white"> Calculate now</button>
+            <button class=" w-[85%] sm:w-[78%] border p-2 font-semibold rounded justify-center ml-7 sm:ml-15 mt-6 bg-[#50347F] text-white"> Calculate now</button>
         </div>
       </div>
 
       
     
     </section>
+
+    <script src=",/app.js"></script>
 </body>
 </html>
