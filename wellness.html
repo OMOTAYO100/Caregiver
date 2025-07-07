@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Document</title>
+  </head>
+  <body class="2xl:max-w-screen-2xl 2xl:mx-auto">
+    <header class="p-6 md:p-10">
+      <nav class="flex justify-between items-center p-4">
+        <img src="Assets/Frame 13029.jpg" alt="" />
+
+        <ul class="space-x-4 text-lg *:text-gray-400 hidden lg:flex">
+          <li><a class="text-[#50347F]" href="index.html">Home</a></li>
+          <li><a class="hover:text-[#50347F]" href="">Wellness</a></li>
+          <li><a class="hover:text-[#50347F]" href="#">Plan</a></li>
+          <li><a class="hover:text-[#50347F]" href="#">FAQ</a></li>
+          <li><a class="hover:text-[#50347F]" href="blog.html">Blog</a></li>
+        </ul>
+        <div class="space-x-4">
+          <a href="#">Login</a>
+          <a
+            class="bg-[#50347F] border rounded-xl text-white py-2 px-3"
+            href="signup.html"
+            >Sing Up</a
+          >
+        </div>
+      </nav>
+    </header>
+    <section class="bg-[#130128] p-6 md:p-12 text-white">
+        <div class="flex flex-col items-center space-y-5">
+          <h2 class="text-2xl font-semibold md:text-4xl">Let's calculate your wellness</h2>
+          <p class="w-2/4 text-center text-gray-400">
+            We are able to tell you the overall percentage of your wellness by
+            collecting your health data and our mood tracking algorithm.
+          </p>
+        </div>
+        <form action="submit" class=" w-2/4 mt-10 p-10 rounded place-self-center flex flex-col  justify-center items-center space-y-3 bg-white text-black border">
+            <h2 class="text-2xl font-semibold md:text-4xl mb-5">Provide health data</h2>
+            <input class="w-[70%] border outline-none bg-purple-200 rounded p-1 " type="text" placeholder="Link health date">
+            <input class="w-[70%] border outline-none rounded p-1 " type="text" placeholder="What is your mood today">
+            <button class="w-[70%] mx-auto bg-[#50347F] self-stretch p-1 rounded">calculate Now</button>
+            
+        </form>
+      </section>
+  </body>
+</html>

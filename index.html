@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Document</title>
+  </head>
+  <body
+    class="relative 2xl:max-w-screen-2xl 2xl:mx-auto font-[poppins] bg-white"
+  >
+    <header class="p-6 md:p-10">
+      <nav class="flex justify-between items-center p-4">
+        <div class="flex items-center space-x-2">
+          <figure class="size-10">
+            <img src="Assets/Frame 10.jpg" alt="" />
+          </figure>
+          <p class="font-bold md:text-xl">
+            Caregiver's <span class="text-[#50347F]">Ally</span>
+          </p>
+        </div>
+
+        <ul
+          class="nav-menu flex flex-col gap-6 fixed top-0 right-0 rounded bg-white/50 backdrop-blur-lg p-24 scale-y-0 origin-top transition-transform duration-300 sm:flex-row sm:static sm:bg-transparent sm:p-2 sm:backdrop-blur-0 sm:scale-y-100"
+        >
+          <li><a class="text-[#50347F] font-semibold" href="">Home</a></li>
+          <li>
+            <a class="hover:text-[#50347F]" href="wellness.html">Wellness</a>
+          </li>
+          <li><a class="hover:text-[#50347F]" href="#">Plan</a></li>
+          <li><a class="hover:text-[#50347F]" href="#">FAQ</a></li>
+          <li><a class="hover:text-[#50347F]" href="blog.html">Blog</a></li>
+        </ul>
+        <div class="space-x-4 hidden sm:block">
+          <button><a href="#">Login</a></button>
+          <a
+            class="signUpBtn bg-[#50347F] border rounded-xl text-white py-2 px-2"
+            href="#"
+            >Sing Up</a
+          >
+        </div>
+        <div
+          class="sm:hidden hamburger fixed bg-[#50347F] py-5 top-[30px] right-6 h-8 w-12 z-30 rounded cursor-pointer before:content-[''] before:h-0.5 before:w-2/3 before:bg-white before:absolute before:top-4 before:left-2 after:content-[''] after:h-0.5 after:w-2/3 after:bg-white after:absolute after:top-6 after:left-2 transition-all before:transition-all after:transition-all"
+        ></div>
+      </nav>
+
+      <div
+        id="mobileMenu"
+        class=" hidden flex flex-col items-center space-y-4 text-lg mt-4"
+      >
+        <a class="text-[#50347F]" href="#">Home</a>
+        <a class="hover:text-[#50347F]" href="wellness.html">Wellness</a>
+        <a class="hover:text-[#50347F]" href="#">Plan</a>
+        <a class="hover:text-[#50347F]" href="#">FAQ</a>
+        <a class="hover:text-[#50347F]" href="blog.html">Blog</a>
+        <div class=" lg:hidden flex flex-col justify-center items-center gap-4">
+          <a href="#">Login</a>
+          <a class="signUpBtn" href="#">Sign Up</a>
+        </div>
+      </div>
+      <section
+        class="bg-cover bg-center h-screen w-full mt-6"
+        style="background-image: url(Assets/Hero.jpg)"
+      >
+        <div class="pt-16 space-y-5">
+          <h2 class="text-2xl md:text-4xl font-semibold text-center">
+            Care for Caregivers
+          </h2>
+          <div
+            class="flex flex-col text-center items-center justify-center space-y-6"
+          >
+            <p class="md:w-[40%] mx-auto text-gray-400">
+              Caring could be hard sometimes, care for yourself as you provide
+              care for you loved ones and others
+            </p>
+            <button
+              class="bg-[#50347F] border rounded-lg text-white py-2 px-3 cursor-pointer"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row gap-4 justify-center items-end mx-10 mt-4 md:mt-0"
+        >
+          <figure>
+            <img src="Assets/Frame-F.jpg" alt="" />
+          </figure>
+          <figure>
+            <img src="Assets/Frame-C.jpg" alt="" />
+          </figure>
+          <figure class="hidden md:block">
+            <img src="Assets/Frame 13034.jpg" alt="" />
+          </figure>
+          <figure class="hidden md:block">
+            <img src="Assets/Frame-A.jpg" alt="" />
+          </figure>
+          <figure class="hidden md:block">
+            <img src="Assets/Frame-E.jpg" alt="" />
+          </figure>
+        </div>
+        <!-- ..........modal section..... -->
+
+        <div
+          class="projectModal fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center"
+        >
+          <div
+            class="flex flex-col justify-center bg-white text-black p-8 rounded-md max-w-xl w-full relative space-y-4"
+          >
+            <button
+              onclick="closeModal()"
+              class="close-btn absolute top-1 right-2 text-3xl font-semibold"
+            >
+              &times;
+            </button>
+            <h1 class="text-4xl font-semibold">Create an account</h1>
+
+            <div class="*:space-y-4">
+              <form action="">
+                <label for="Email">Email</label><br />
+                <input
+                  class="appearance-none border-2 w-[80%] rounded p-2 border-[#50347F]"
+                  type="text"
+                  placeholder="Johndoe@gmail.com"
+                /><br />
+                <label for="password">Password</label><br />
+                <input
+                  class="appearance-none border-2 w-[80%] rounded p-2 hover:border-[#50347F]"
+                  type="text"
+                  placeholder="enter your password"
+                />
+                <button
+                  class="bg-[#50347F] text-white flex items-center justify-center space-x-2 w-[80%] border-2 rounded p-2"
+                >
+                  Create account
+                </button>
+                <div
+                  class="bg-[#EBE0FD] text-[#50347F] flex items-center justify-center space-x-2 w-[80%] border-2 rounded p-2"
+                >
+                  <figure>
+                    <img src="Assets/Google - Original.jpg" alt="" />
+                  </figure>
+                  <button class="">sign in with google</button>
+                </div>
+                <p>
+                  Already have an account? <span><a href="#">log In</a></span>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="">
+        <figure>
+          <img src="Assets/Frame 13002.jpg" alt="" />
+        </figure>
+      </section>
+
+      <section class="p-6 md:p-12">
+        <h2 class="text-2xl font-semibold text-center">Our Stats</h2>
+
+        <div
+          class="w-[93%] mx-auto grid md:grid-cols-4 mt-10 text-center rounded *:border *:p-4"
+        >
+          <div class="">
+            <p class="text-4xl font font-semibold">24</p>
+            <p>Groups</p>
+          </div>
+          <div>
+            <p class="text-4xl font font-semibold">300</p>
+            <p>Carers</p>
+          </div>
+          <div>
+            <p class="text-4xl font font-semibold">150</p>
+            <p>Facilitators</p>
+          </div>
+          <div>
+            <p class="text-4xl font font-semibold">10</p>
+            <p>Partners</p>
+          </div>
+        </div>
+
+        <div
+          class="md:p-6 flex flex-col md:flex-row md:space-x-29 space-y-20 items-center mt-10"
+        >
+          <div class="w-full lg:w-1/2">
+            <p class="text-gray-400 text-center">
+              Caring for someone who has a medical issue can be hard to deal
+              with. It can be upsetting and difficult to see them struggle if
+              you are a carer or a family member. The weight of caregiving have
+              a wide impact on friends, family members and carers and we want to
+              support them to help them care better, live their own life, and
+              develop coping mechanisms. The family support group is not about
+              what the person is going through, but about how the family and
+              loved ones are coping.
+            </p>
+          </div>
+          <div class="md:relative">
+            <figure class="">
+              <img src="Assets/Rectangle 325.jpg" alt="" />
+            </figure>
+            <figure
+              class="hidden md:block md:absolute md:-right-28 md:-bottom-16"
+            >
+              <img class="rounded-5xl" src="Assets/Rectangle 326.jpg" alt="" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- .......... Inquiries .......... -->
+
+      <section class="p-6 md:p-12">
+        <div
+          class="md:p-10 flex flex-col justify-center items-center space-y-5"
+        >
+          <h2 class="text-2xl md:text-4xl font-semibold">Need More Info</h2>
+          <p class="md:w-[83%] text-center text-gray-400">
+            This means all families living with a typically unhealthy person
+            (Medically, Mentally, and Emotionally) can use our mobile app as
+            their companion.
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row md:justify-between md:items-center bassis-2/4 mt-10"
+        >
+          <div class="space-y-6 *:text-center md:*:text-start">
+            <h2 class="text-2xl font-semibold md:text-4xl">
+              Support Group Session
+            </h2>
+            <p class="md:w-[83%] text-gray-400">
+              A group of similar caregivers where you can share how you feel and
+              learn from experience.
+            </p>
+            <ul class="space-y-2 text-gray-400">
+              <li>Share your story and get help</li>
+              <li>Hear and learn from others like you</li>
+              <li>Learn to cope as you go</li>
+            </ul>
+            <div
+              class="border px-4 py-2 justify-self-center md:justify-self-start bg-[#50347F] text-white rounded-lg"
+            >
+              <button class="cursor-pointer">Get Started Today</button>
+            </div>
+          </div>
+          <figure class="self-center">
+            <img src="Assets/Illustration-1.jpg" alt="" />
+          </figure>
+        </div>
+
+        <!-- .......Second-line....... -->
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center *:basis-2/4 mt-10"
+        >
+          <figure class="self-center size-">
+            <img src="Assets/Illustrationsssss.jpg" alt="" />
+          </figure>
+
+          <div class="space-y-6 *:text-center md:*:text-start">
+            <h2 class="text-2xl font-semibold md:text-4xl">Self Care Tools</h2>
+            <p class="text-gray-400">
+              Do not loose track of self while caring for others. Stay healthy
+              with self-care tools
+            </p>
+            <ul class="space-y-2 text-gray-400">
+              <li>Understand your overall well being</li>
+              <li>Take care of yourself as you take care of others</li>
+              <li>Access tools for free</li>
+            </ul>
+            <div
+              class="border px-4 py-2 justify-self-center md:justify-self-start bg-[#50347F] text-white rounded-lg"
+            >
+              <button class="cursor-pointer">Get Started Today</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ........Third line......... -->
+
+        <div
+          class="flex flex-col md:flex-row md:justify-between items-center *:basis-2/4 mt-10"
+        >
+          <figure>
+            <img src="Assets/Illustrations-2.jpg" alt="" />
+          </figure>
+          <div class="space-y-6 *:text-center md:*:text-start">
+            <h2 class="text-2xl font-semibold md:text-4xl">Daily Planner</h2>
+            <p class="text-gray-400">
+              Plan your everyday personal and caring activities as you learn to
+              balance your life with care.
+            </p>
+            <ul class="space-y-2 text-gray-400">
+              <li>Jornals to take your thoughts out</li>
+              <li>To do list for keeping tracks</li>
+              <li>onstant reminder</li>
+            </ul>
+            <div
+              class="border px-4 py-2 justify-self-center md:justify-self-start bg-[#50347F] text-white rounded-lg"
+            >
+              <button class="cursor-pointer">Get Started Today</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ......Fourth line...... -->
+
+        <div
+          class="flex flex-col md:flex-row md:justify-between md:items-center bassis-2/4 mt-10"
+        >
+          <div class="space-y-6 *:text-center md:*:text-start">
+            <h2 class="text-2xl font-semibold md:text-4xl">
+              Learning Resources
+            </h2>
+            <p class="text-gray-400 lg:w-[70%]">
+              Access learning resources and funding resources to help you
+              understand and better navigate your life as a carer.
+            </p>
+            <ul class="space-y-2 text-gray-400">
+              <li>Huge care giiving library</li>
+              <li>Access to funding</li>
+              <li>Physical events and sessions</li>
+            </ul>
+            <p class="bg-purple-200 inline-block p-4">
+              💡 This service is a one-off and there is no monthly payment
+              <br />necessary in this plan.
+            </p>
+            <div
+              class="border px-4 py-2 justify-self-center md:justify-self-start bg-[#50347F] text-white rounded-lg"
+            >
+              <button class="cursor-pointer">Get Started Today</button>
+            </div>
+          </div>
+          <figure class="self-center">
+            <img src="Assets/Illustrations-3.jpg" alt="" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="p-6 md:p-12">
+        <div
+          class="bg-[#0D2344] text-white rounded-4xl space-y-4 md:flex p-6 md:p-26"
+        >
+          <div
+            class="flex flex-col justify-between items-center md:items-start space-y-6 space-x-5"
+          >
+            <h2 class="text-2xl font-semibold md:text-4xl">
+              The Caregiver's Ally
+            </h2>
+            <p class="text-center md:text-start text-gray-400 md:w-[70%]">
+              Caring could be hard sometimes, care for yourself as you provide
+              care for your loved ones and others.
+            </p>
+            <div class="flex space-x-4">
+              <figure>
+                <img
+                  src="Assets/Store Name=Google Play, Badge Color Type=Black, Language=EN.jpg"
+                  alt=""
+                />
+              </figure>
+              <figure>
+                <img
+                  src="Assets/Store Name=Apple App Store, Badge Color Type=Black, Language=EN.jpg"
+                  alt=""
+                />
+              </figure>
+            </div>
+          </div>
+          <figure class="justify-self-center">
+            <img src="Assets/Group 12775.jpg" alt="" />
+          </figure>
+        </div>
+      </section>
+    </main>
+    <div class="w-[90%] mx-auto">
+      <hr class="border-gray-300" />
+    </div>
+
+    <footer class="p-6 md:p-12">
+      <div class="flex flex-col md:flex-row items-center space-y-4 space-x-35">
+        <figure>
+          <img src="Assets/Frame 13029.jpg" alt="" />
+        </figure>
+        <div
+          class="flex flex-col md:flex-row space-x-25 space-y-4 *:text-sm *:text-gray-400"
+        >
+          <a href="">FOR CARERS</a>
+          <a href="">FOR FACILITATORS</a>
+          <a href="">COMPANY</a>
+          <a href="">CONTACT</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
