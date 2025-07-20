@@ -1,3 +1,11 @@
 @import "tailwindcss";
 
 
+/* Add to your input.css */
+/* .hamburger::before {
+  @apply rotate-45 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+.hamburger::after {
+  @apply -rotate-45 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+} */
